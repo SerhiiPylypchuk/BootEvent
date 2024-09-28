@@ -52,6 +52,7 @@ dependencies {
     implementation(project.dependencies.platform((libs.koin.bom)))
     implementation(libs.koin)
     implementation(libs.koin.workmanager)
+    implementation(libs.koin.viewmodel)
 
     implementation(libs.joda)
 }

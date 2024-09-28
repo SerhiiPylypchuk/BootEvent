@@ -12,7 +12,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -29,11 +28,12 @@ import com.spylypchuk.testbootevent.view.state.MainState
 import com.spylypchuk.testbootevent.work.BootNotificationWorker
 import kotlinx.coroutines.launch
 import org.joda.time.format.DateTimeFormat
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
 
-    val viewModel: MainViewModel by viewModels()
+    val viewModel: MainViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
                         is MainState.HasData -> {
                             text.text = state.data
                                 .map {
-                                    DateTimeFormat.forPattern("DD.MM.YYYY").print(it.timestamp)
+                                    DateTimeFormat.forPattern("dd.MM.YYYY").print(it.timestamp)
                                 }
                                 .groupBy {
                                     it

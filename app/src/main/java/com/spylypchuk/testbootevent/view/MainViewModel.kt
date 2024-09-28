@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class MainViewModel(
-    val repo: BootEventRepository
+    private val repo: BootEventRepository
 ): ViewModel() {
 
     val _state = MutableStateFlow<MainState>(MainState.NoData)

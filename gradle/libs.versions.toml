@@ -28,6 +28,7 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 koin-bom = { group = "io.insert-koin", name = "koin-bom", version.ref = "koin" }
 koin = { group = "io.insert-koin", name = "koin-android" }
 koin-workmanager = { group = "io.insert-koin", name = "koin-androidx-workmanager", version.ref = "koin" }
+koin-viewmodel = { group = "io.insert-koin", name = "koin-core-viewmodel", version.ref = "koin" }
 
 joda = { group = "net.danlew", name = "android.joda", version = "2.13.0" }
 
